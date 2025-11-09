@@ -1,73 +1,21 @@
-# React + TypeScript + Vite
+### Assignment 2
+- **Primary Link:** [tutedude.ompdas.com/assignment-2](https://tutedude.ompdas.com/assignment-2)  
+- **Backup Link:** [tutedude-assignments-assignments.vercel.app/assignment-2](https://tutedude-assignments-assignments.vercel.app/assignment-2)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Objective
+The goal of this assignment is to **create a basic To-Do application using React**.  
+The app will allow users to **add tasks to a list**, **manage the state** of these tasks, and ensure a **dynamic user interface**.
+## Requirements
+### Todo: Add an Input Field
+- **Text Input Field:** Provide a text input field where users can type in the title of their to-do task.  
+- **Button:** Create a button to add a Todo.  
+- **Show Alert:** On button click, display an alert if the input field is empty when entering a todo.  
+  If the input is not empty, show a successful add message.
+### Display Added Items
+- **List of Tasks:** After clicking the **“Add”** button, the task should appear below the input field as part of a to-do list.  
+- **Add Complete Functionality:** Use a checkbox with each todo for showing complete when the checkbox is checked.
+## UI/UX
+- **Dynamic Rendering:** The list of added to-dos should be displayed below the input field and rendered dynamically without reloading the page.  
+- **Attractive Design:** Create a good-looking website.
