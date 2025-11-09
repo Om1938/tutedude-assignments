@@ -1,0 +1,71 @@
+.counter-card {
+  flex: 1 1 320px;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 18px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.counter-card:hover {
+  border-color: color-mix(in oklab, var(--border) 70%, var(--accent));
+}
+
+.counter-heading {
+  margin: 0 0 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.counter-value {
+  margin: 8px 0 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  appearance: none;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 56px;
+  height: 44px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease,
+    transform 60ms ease;
+}
+
+.btn:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.btn:hover {
+  background-color: color-mix(in oklab, var(--border) 18%, transparent);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.increment:hover {
+  border-color: color-mix(in oklab, var(--border) 60%, var(--accent));
+}
+
+.decrement:hover {
+  border-color: color-mix(in oklab, var(--border) 70%, var(--muted));
+}
