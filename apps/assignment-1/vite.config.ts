@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react-swc'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build:{
+  base: '/assignment-1/',
+  build: {
     outDir: '../../dist/assignment-1'
   }
 })

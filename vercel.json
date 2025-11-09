@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/", "destination": "/assignment-1/index.html" },
+    { "source": "/assignment-1", "destination": "/assignment-1/index.html" },
+    { "source": "/assignment-1/(.*)", "destination": "/assignment-1/index.html" },
+    { "source": "/assignment-2", "destination": "/assignment-2/index.html" },
+    { "source": "/assignment-2/(.*)", "destination": "/assignment-2/index.html" }
+  ]
+}
